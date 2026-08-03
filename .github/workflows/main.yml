@@ -11,14 +11,9 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        type: choice
-        description: 'Select the environment'
+        description: 'Environment to deploy to'
+        type: environment
         required: true
-        default: 'Production'
-        options:
-          - Production
-          - Test
-          - Load-Test
 
 jobs:
   Build:
